@@ -8,7 +8,6 @@ import java.util.Scanner;
  */
 public class WordGuesser {
 
-    // These are immutable static final strings that allow for repeated use through variables.
     public static final String WELCOME_MESSAGE = "Welcome to WordGuesser.java!";
     public static final String WORD_INPUT = "Player 1, enter the word for Player 2 to guess";
     public static final String EMPTY_WORD_PROMPT = "Word cannot be empty. Player 1, please enter a non-empty word.";
@@ -24,22 +23,19 @@ public class WordGuesser {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // This prints the welcome message.
         System.out.println(WELCOME_MESSAGE);
         
-        // Assigning variables.
-        String player1;
-        String player2 = "";
-        String playAgain = "";
-        boolean wordComplete;
+        String player1; //  Variable for word entered by Player 1.
+        String player2 = ""; // Variable for letter entered by Player 2.
+        String playAgain = ""; // Variable for input entered by either player.
+        boolean wordComplete; // Tracks whether Player 2 has guessed the entire word.
         
         do { 
 
-            // This prints the prompt for player 1.
             System.out.println(WORD_INPUT);
             
             do {
-                player1 = scan.nextLine().toLowerCase(); // Scans user input.
+                player1 = scan.nextLine().toLowerCase(); 
 
                 if (player1.equals("")) {
                     System.out.println(EMPTY_WORD_PROMPT);
@@ -48,8 +44,7 @@ public class WordGuesser {
             } while ((player1.equals("")));
           
             // ^^^
-            // This loop checks to make sure player 1 didn't enter an empty String.
-            // Reprompts if there is no word entered.
+            // Continue prompting until Player 1 provides a non-empty word.
        
             int length = player1.length(); 
             String[] word = new String[length];
@@ -68,18 +63,14 @@ public class WordGuesser {
                 }
             }
             System.out.println();
-
-            // ^^^
-            // This prints for player 2 to see how many letters to guess.
             
-    
             System.out.println(GUESS_PROMPT);
-            // This prompt lets player 2 know they are able to make a guess.
+            // ^^^
+            // Prints the amount of guesses player 2 has with spaces for each letter.
           
-
             do { 
            
-                player2 = scan.nextLine().toLowerCase(); // Scans user input.
+                player2 = scan.nextLine().toLowerCase(); 
            
                 if ((player2.length() > 1) || (player2.equals(""))) {
                     System.out.println(INVALID_GUESS_PROMPT);
@@ -87,13 +78,12 @@ public class WordGuesser {
            
             } while ((player2.length() > 1) || (player2.equals("")));
 
-            //^^^
-            // This loop checks if player 2 enters exact one letter.
-            // Reprompts otherwise.
+            // ^^^
+            // Checks that Player 2 enters exactly one letter before continuing.
             
             wordComplete = false;
             int numGuesses = (length + 3);
-            //number of guesses = length of player 1's word + 3 extra guesses.
+            // Player 2 receives three additional guesses beyond the word length.
 
             do {
                 
@@ -168,9 +158,9 @@ public class WordGuesser {
 
        
             if (wordComplete) {
-                System.out.println(WINNING_PROMPT); // Prints if the word is fully guessed.
+                System.out.println(WINNING_PROMPT);
             } else {
-                System.out.println(LOSING_PROMPT); // Prints if the word is not fully guessed.
+                System.out.println(LOSING_PROMPT); 
             }
 
 
