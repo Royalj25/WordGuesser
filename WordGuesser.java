@@ -3,7 +3,7 @@ import java.util.Scanner;
  *
  *A program for a word guesser
  *
- *@author Jaiah Royal L2
+ *@author Jaiah Royal
  *@version 2026-07-01
  */
 public class WordGuesser {
