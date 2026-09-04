@@ -34,29 +34,13 @@ The program allows Player 2 a maximum of **6 guesses per round**. Each unsuccess
 
 Player input is converted to lowercase when entering the word and guesses, while the play-again response is converted to uppercase.
 
-### Concepts Demonstrated
-
-- Java programming fundamentals
-- `Scanner` and console input
-- `String` manipulation
-- Arrays
-- `for` loops
-- `do-while` loops
-- Conditional statements
-- Boolean variables
-- Input validation
-- `String.contains()`
-- `String.substring()`
-- Formatted output with `printf()`
-- `static final` constants
-
 ---
 
-## ▶️ Running the Program
+## 👀 Check Out My Other Projects!
+- Here is an easier way to get there:
+  
+  --> [`CreateNewUser`](https://github.com/Royalj25/CreateNewUser) 
+  
+  --> [`HobbyRecommender`](https://github.com/Royalj25/HobbyRecommender) 
 
-Make sure the source file is named `WordGuesser.java`.
-
-Compile the program:
-
-```bash
-javac WordGuesser.java
+- Wanna get back to the main repository? --> [`Portfolio`](https://github.com/Royalj25/Portfolio)
