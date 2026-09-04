@@ -26,7 +26,7 @@ public class WordGuesser {
         System.out.println(WELCOME_MESSAGE);
         
         String player1; //  Variable for word entered by Player 1.
-        String player2 = ""; // Variable for letter entered by Player 2.
+        String player2 = ""; // Variable for characters entered by Player 2.
         String playAgain = ""; // Variable for input entered by either player.
         boolean wordComplete; // Tracks whether Player 2 has guessed the entire word.
         
@@ -48,7 +48,7 @@ public class WordGuesser {
        
             int length = player1.length(); 
             String[] word = new String[length];
-            // This array stores the letters of player 1's word.
+            // This array stores the contents of Player 1's word.
             
            
             System.out.println(CURRENT_WORD_PROMPT);
@@ -66,7 +66,7 @@ public class WordGuesser {
             
             System.out.println(GUESS_PROMPT);
             // ^^^
-            // Prints the amount of guesses player 2 has with spaces for each letter.
+            // Prints the amount of guesses Player 2 has with spaces for each character.
           
             do { 
            
@@ -79,7 +79,7 @@ public class WordGuesser {
             } while ((player2.length() > 1) || (player2.equals("")));
 
             // ^^^
-            // Checks that Player 2 enters exactly one letter before continuing.
+            // Checks that Player 2 enters exactly one character before continuing.
             
             wordComplete = false;
             int numGuesses = (length + 3);
@@ -89,16 +89,16 @@ public class WordGuesser {
                 
                 if (!(player1.contains(player2))) {
                     System.out.println("There is no " + player2 + "!");
-                } // Checks first if the letter player 2 enter is in the word player 1 entered.
+                } // Checks first if the letter Player 2 enter is in the word Player 1 entered.
                 
                 for (int i = 0; i < player1.length(); i++) {
                     if (player1.substring(i, i + 1).equals(player2)) {
                          word[i] = player2;
                     }
-                }  // This loop runs if the letter player 2 enters is equal to any letter in player 1's word.
+                }  // This loop runs if the letter Player 2 enters is equal to any letter in Player 1's word.
                 
                 wordComplete = true;
-                // Assumes the word is completed / player 2 fully guesses the word.
+                // Assumes the word is completed / Player 2 fully guesses the word.
                 for (int i = 0; i < word.length; i++) {
                     if (word[i].equals("_")) {
                         wordComplete = false;
@@ -117,7 +117,7 @@ public class WordGuesser {
               
                  if (numGuesses == 0) {
                      break;
-                 } // Checks to make sure player 2 hasn't ran out of guesses.
+                 } // Checks to make sure Player 2 hasn't ran out of guesses.
                  
                  System.out.printf("Player 2, you have %d guesses left!\n", numGuesses);
                  System.out.println(CURRENT_WORD_PROMPT);
@@ -134,9 +134,9 @@ public class WordGuesser {
                  System.out.println(GUESS_PROMPT);
 
                  // ^^^
-                 // Prints the amount of guesses player 2 has left.
-                 // Prints the amount of correct letters player 2 has guessed thus far.
-                 // Reprompts player 2 to continue.
+                 // Prints the amount of guesses Player 2 has left.
+                 // Prints the amount of correct letters Player 2 has guessed thus far.
+                 // Reprompts Player 2 to continue.
                     
                  do {
                         player2 = scan.nextLine().toLowerCase(); // Scans user input.
@@ -148,7 +148,7 @@ public class WordGuesser {
                     } while ((player2.length() > 1) || (player2.equals("")));
 
                      // ^^^
-                     // This loop checks if player 2 enters exact one letter.
+                     // This loop checks if Player 2 enters exact one letter.
                      // Reprompts otherwise. 
                    
              
