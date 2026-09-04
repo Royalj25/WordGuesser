@@ -74,17 +74,13 @@ Would you like to play again (Y or N)?
 
 ## ⚠️ Input Assumptions
 
-The program assumes that Player 1 enters a word consisting of letters and that Player 2 enters letters as guesses.
-
-The current input validation for Player 2 only checks that the input contains **exactly one character**. It does not verify whether that character is specifically a letter. Therefore, numbers, symbols, or other single characters can technically be entered as guesses and will count toward the available guesses.
-
-Player 1's input is only checked to make sure that it is not empty. Other types of characters are not specifically restricted.
-
-These cases are outside the scope of the current implementation and are not specifically tested in this sample.
+- Player 1's word must be non-empty but is not restricted to letters.
+- Player 2 must enter exactly one character, but the program does not require it to be a letter.
+- Numbers, symbols, and other single characters are accepted as guesses.
 
 ---
 
 ## 🧪 Want to Test My Code?
 Ready to see my code in action? -->
-[Click here to learn how!](https://github.com/Royalj25/HowToTestMyCode) <--
+[Click here to learn how!](https://github.com/Royalj25/TestingTutorial)
 
